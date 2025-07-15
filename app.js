@@ -18,13 +18,6 @@ const db = mysql.createPool({
     connectionLimit: 3 // lower than 5
 });
 
-db.connect((err) => {
-    if (err) {
-        throw err;
-    }
-    console.log('Connected to database');
-});
-
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'));
 
